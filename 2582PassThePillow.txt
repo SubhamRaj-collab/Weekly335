@@ -1,0 +1,37 @@
+class Solution {
+    public int passThePillow(int n, int time) {
+        
+        int i = 1;
+        
+        int count = 0;
+        
+        boolean reverse = false;
+        
+        while(count < time)
+        {
+            if(!reverse)
+            {
+                i++;
+                count++;
+            }
+            else
+            {
+                i--;
+                count++;
+            }
+            
+            if(i == n)
+            {
+                reverse = true;
+            }
+            if(i == 1 && reverse == true)
+            {
+                reverse = false;
+            }
+            
+        }
+        
+        return i;
+        
+    }
+}
